@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: -16px;
+            overflow: hidden;
+            background-color: rgb(242, 225, 225);
+            
+        }
+        nav{
+            margin: 0;
+            height: 100px;
+            width: 100%;
+            background-color: rgb(23, 23, 23);
+        /* color: pink; */
+    }
+        ul{
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 79px;
+            margin-left: 30%;
+            /* flex-direction: ; */
+            /* justify-content: f; */
+            
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        form{
+            margin-left: -80px;
+            width: 100%;
+            margin-top:-2px;
+            background-color: rgb(215, 180, 187);
+            padding-left: 9px;
+            padding-bottom: 5px;
+            /* padding-top: 2px; */
+            
+            /* margin-bottom: -20px; */
+        }
+        input{
+            width: 50%;
+            height: 20px;
+            margin-top: 5px;
+        }
+        label,input,textarea{
+            display: block;
+        }
+        .content{
+            display: flex;
+            margin-left:100px ;
+            justify-content: space-evenly;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav style="display: flex;">
+        <img style="height: 80%;padding-top: 10px;width: 100px;margin-left:40px ;margin-top:10px ;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAA3lBMVEUAAAD////QGBj4+PjPFxNRUVHf398/Pz/WGBUNBgOYExLLAACcFBPHGBcrBwhIDA4LCwvCGBcPAwgxMTGioqJlZWVtbW3x8fHJycno6Ojywr7ig4DAwMB/f38rKys5OTnS0tKSkpLrlZMjIyPMDwoVFRXQIyX329rRMi9HR0d2dnbhbmzcY2C0tLTX19fi4uL57OnaWFTZTUvrmptZWVmJiYmfn58cHBzBwcHie3kbBwc2CQp+ExGvFxVpDw9VDgyLExTwubrgcW344d/UPDjooqD1zsnxtbSqFxZxEBJ9jx8JAAAOM0lEQVR4nO2cCXebxhbHwRjkJmlLithaJKBYTaABNS1amjRd0r730u//hd7scwdhW7JH8bE0/9PTGJj1xyx37gyyLCMjIyMjIyMjIyMjo8+sd1/p0xePXZl76f1vH77Uppcvfn/32BU6XH+8vLrUp4uryxfvH7tKh+rrl1cXF/oQoLSuPnz12JU6TO8+IQR6dXn17LFrdZh+J+9OM4Qv/3jsah2kP7U3A6Sr3x67Wofoi2dHYfDsKc2QR2Lw4pvHrtgBMgwMAyzDwDDAMgwMAyzDwDDAMgwMAyzD4GYGhzhNTpTB9fN9dX2qDJ6/+XZf/fh8pCmcBIPv7H31/cky+HVvBt8ZBoaBYXDiDPYfE0+WwfXPv3x/l16dOIN9bKS/Tp3Bnbq++NYwOH0Gl9e36fIcGFxe/HCb0Grx9Bk8//j3qxv197evr8+Bwa32wavzYHCrnWgYGAaGwZkxcEZ0Vgyu//n48eOPO/r+nBjcsGZ665wTg1E9f2MYnB2DkR2kM2MwHA+uz4/B9evvVMfZ2+uzY/D8559Us+g/uKZnzuAXw8AwMAwMA8PAMDAMDAPDwDDYj8FfhsH5tQO2ZrIFg8szaAevflLE2gG9+C9h8D968eupMrj84a2qf7D/4PL1G/z3m7cXuNo/0yevxw7rngKDi8vRU8ncu0Te/KmfV36oDAPDwDAwDAwDw8AwMAwMA8PAMDAMToTBC8PAtAOk3670/17axdWfj12tg/THl+Y34yz9neHJ/Xag9dUH3RCuPjy5H9J8/+niSqMuL58eAst69++nl/r06d8n+JuySN+8/1qX3j9NAkZGRkZGRmegxWbjP3YZHlO+W7ZJUSTtqt/gK6EFejjv+VWAw07E5cby694d0caai78nJIOAh+vptSUj9oEoxgQmUgeLnXLmMtZEM4EoccQRmhbllPKvE1OcU8k/XLSnOPBWfMcYWkE39k1jHFoz8X1jhnOoEvFwRZl4MngrypGoyXRtVKkllXk7xVwngqCFx4gy3wpSfhHnhAEXY8AVWnPPHhFmINPDWfSCsUdrJW/YdsEr6ic7SXUz2Bhgdo6rEUFdKLkqDNIRBhlk0N3JgLzltbgsaaYzEDytb2aAygPedx+DB40+BPmgGjoY9AMGm6WSIBJseg6vzSgDO5HjBSRnr7UhWGwHWR6DQTQs+EaJx2szzsBuxXQ1hbcLbQzKYY7HYCCiOKzZT2CjpkPGzQzsiD3fKM/jaqcy91OdDjM8AoM8BRdEkQPDe8EOgxgGKFisyRLGsnUNirB1OUnbJs72EAaBWiqe0GBMXIEHVGs1fD9k4JThVFKI6zFy9koPggloBh2ejDdhdFA7aAtkWRWybF6Cb7gKA1m1LZ/oBo1+tsOgB+TEoFmqsdqRCt1DMh97KYff/RlY1Xw+ryaiR8ThpkK3fIWBK5JjdbXmg+Yz3WGAk5b9jA6afqvG6jY6EAB7RzTTwxgQVcLC4K1WYSDii0Lzed5jGTErSWUA5k/KiFtI6XKQ2YMkK2sn/tjtFDeOlVKWEQZzyYCPU4DBQtSs5BmwFJ0pSyudjDGQYxVl4LIu17b0D0eLlQQs1hm4DWzlcFLnalkOZTAVxl0qLD72huOGJx3dzoDCa9jVesWKrcVKmgkGivUNmgf8XZd7toMpjE3rysKnNW9i5QiDhUjVoYh4QjNONdHBoBQlXebjDFTdh8GSJya7L5+N0jk3INvFgEEPZ8K0guTsMGcMwDB+f8lRp4MrUa0MhORUxmvX+S575s0HDJp5KQtBG1AQ8zz48iMG47gGBgmcZ47DQBaYW0iJxd8o7YrQTgTGNAVk9fwyt/isqcNKktX5DAzWO9m20taeDRgAeSxNPnYkFUjgiTEQ00IgX6Oo9fRGBgkfRnijzWRDKna9bQdL9oUCLsK0MtidfsVkGckSdP44A0/4kTbchzSV81mqwakoZ2APDrFaGSTiYTJ4hgeBkkcMxhnI1l5zcmgQCBkDJ7IerFLkpdidgEGXJIk6QB9sH4hMeB6cfDyXdg8xikYYCD+bePdxBNwPpfVgNbKhQqKHrhf2tBPZHFfxmnYW6BelwiD2HCUOIIep+LxfZA/fEXEVl/pxGID1Ap3kxHo9LctVyxlkCoNUWAceM97Es3halmv+tHu4lVTJNWwKDEW9DOSo45BRMbTH5G2UdtCLFS2zAfJxL37/YAbQvZvJu5oZhKIzkKYLfBawNq5iJ7piKVPQWTuMR6PBpd491YDkpmR6nLuH+JH2YiB3RshrG3hCeK1n6nohEHWmK+RyLBIYLu6vHM6CXRk1aw8tXzQzALVGI1812qhJ2sq6UaS5JQ1hnBw2Gh8sFS9eJmfa+wKYfrrKqlXHqKyNrzJQHbGbYjyWDisp2HkrB/nW92MA7I1I6X5Q3kRlIGwiMmXt7gGIgA/XTpGOwMDagisxS6Qt1pY3C7QQVhjIDRVsW4mdKicj0QQgDVbSYP/qSAzkVZqL6KqjFNdG9SMp2YoNCY96W8TwoMXBPvRYH4OBHOTtTKTN3mAhA6oM5MARz6UDnC06RJmWWhzsi6kySh2DAegMUswrLF4BWroqDMDu4kru0U4H6ceazqPM4MC49YV3h+UwYCCLxhkIh4DYNQOGUKZeCvHRTLRy1O3l4B8p+XazYf+XxqYGK4loXnZ8Ndoh2zQolh7RssPtYJV67JIsbNolv+QVnmciPG8HjccDkRdXdzySuF/Ug5BpaImkPQzI9cRlpzzACYp0tAyKtBph2WZZu47IOj6fMOXYuK1qdlWTNU/AH9bcveHnPMREeDxEoGAQgt/P2ZJvIe5UVqCkI4sxkbFZBr6avjYtNHimjIyMjIyMnrw2bu/Wde32NZmvfXKJ/tf36K6cLHN6O8dnrUlwd5Hzv0QQdNlPfBaCn7yuN/jUN783masT8CKcbtsSJVG7PBeUSD+35jSJuub/5tYEZ4BzrGCRNNjKVbRO49jxVj1lEK48x9k20Qyfn25FgevZ1nGSWe33pefETlqGC7eNsTJ+GqTPcDqR36MU4jhdpkQOPi0SNDisE+MbxRqUelI4xbTt4u0saUguCYoat1FulQ4JjnPA/3OcwnczlESMSkE37eopTrLV4FW1iDHvgJRCh2y8+fi0BzBE515KTTLskKf1xv6hFnj4W7sgQXrHXrrzAGuyZo5htDRK3Dzo0b+p8HvkHnE1+43H99GDgq2ypnYboveP1gwt+idcO2lFiwR2xNb2UocLBWvi2AlooRtugpeqmyZjy1a/oDtjFtmzhedhVuw0S5WC8wwtDdHwoCvpEUdLULbiyTue05RtoLXUMRA6/CAOOSWyVhiUjp5GgAsQKwwWS+bSx6eVwLZDu2XPE5u1CFxCuFmbMEqVBzY/Ilr1yOHL3kxsD9UOTwjlNWRQ82iMMrmB19CibVZLTScUrZsZhPgghHwiGBSCQVXAlpLHbMNOYRDQgUYyaGzejhp+vAIpYcPKlKVYUt+IZDCr2XXKB+Ey1bdeuolB1KF+Kj34Iwxww5bvokxZm1AYMEkGqHmxo9sz8BFCyXoFZ7AR0fhRd1rEVgxBQazLdWDdwsDboFHP4TmNMchT6cjZFHxsAAx8HlIyCNnnMaQrifExZG1oqrqKJQMm7OOiQbdajqUx3cgAVXUqt7/HGODnvH+GwpEGGAT8qWRQivMj2J8ar+hb5Qv3uxjgxtNV5InOj3luZpATzxkb9kYZoIbtsT/bgk+TmAHr6CE4rU8Z4K0t3gOIY79VjtzeyQC7Gdf4WIq+AdG6nQH5ZoB2wFEG+Cs3WuY8FafEEAPPnedBkIceYEAqg7+ekrUiJ07TNRg87mSAjyygFldqOZwodCsDXAr6Pd4oAzwq0h3rmZxGEQPH65CWogPgZLK6j6apXcDjHg1xYXtydLubAe5/mZtqHBCtuxjg/kt6+jiD3GMDRiI37xGDNEIrDrdfxaAdpFmBeEbq0ZEJOYDttHyS3INBgBDHW73f5N7BAE9H2DgbZ4DfCi7lBByHAOPBTDDAsyzez9mpUkQ86l3Ok7uTAbbRY50DonU3A/z1H7LssnEGbkwqvO7kLTAvTEBfWJPvMnbPklUl3j3IaBH2YbBB6Wv2/wYqgw3vapwBOQNSWi2bjwcMrAR/SLBIwfIKMNjw1sHmBWQSeLuDWd+Bw+n7MdD1URvTPFWSDFL2pgQDPCc7/ZR1+CGDCI+KUQxu3WYnroFlWYvug3eqaIvZh0Gln8FiqVSq5j1bMiBDAp/mhgxQ9HjSQqNtwKDCdi9ngJcY3DwI5Uka9Jgm/0gMcGsGdkrDLFnIgHyxdAMD/GqTFBZcZeCvceLCRsLOBb7slB8QoeX24zJYKafg+QoYMiDnQDiDZMAAnxhRvjFTGcyIN0qxlVlKfSzGR8SAFmHIYOyLnWMwQHO8JxxcpSgDZCAb6247wDOe8iUBmBvxkUzS9COxAsXGLh1AXafg6Bp+GHOqThyfjQEe+As64QatA74+g5PwmjOYx8PfHogGn9mhyVa4ivqOAivlmW1k7FLL03V4tm7Ka56px2vKsZMmqOHp+a5PUejZcVauyizlS+UK2Xh20biix/oFqUMd4fMHy5kLZtO5B6y2Rd3g4whxgYWt5Rb7lYkJ0Ib0XePTCEVZW73XevF21cxah85FeYhPZMRlT1sRjeZMe/ixlV9HOP0icnX/esu8ab00XSYlzy5oZjP0XySrWuNVrh+i2w1+AAeAFfjScBPRECuqWYNSzBsWi771RdQ0q1VvuY1VhdNimRYsW5dFbZhxxqI18KUvRAmO8As2/mIDjS8f/H/n9siDnRAj90Yjgd/j8QfhRqPdXQIjIyMjIyMjIyMjIyMjIyOjQ/V/VpcmrDWuiyIAAAAASUVORK5CYII=">
+        <ul style="list-style-type: none;">
+            <li>
+           <a href="" style="text-decoration: none;color: white;">     Home</a>
+            </li>
+            <li>
+                <a href="">     Contact us</a>
+                 </li> <li>
+                    <a href="">     About</a>
+                     </li>
+            
+        </ul>
+    </nav>
+    <div style="margin-left: 40px;">
+        <p style="font-weight: 5;font-size: 12px;">Contact us:
+        <br>
+            phone no. :90235489XX<br>
+            email : chitkarauniversity@gmail.com<br>
+            instagram: @chitkara_university
+        </p></p>
+    </div>
+    <div class="content" style="height: 450px;">
+        <div class="map" >
+          <div class="mapouter" style="height: 100%;width: 550px;"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Chitkara university&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://embedgooglemap.2yu.co/">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>  
+        </div>
+        <div class="form" style="height: 300px;width: 500px;">
+            <form>
+                <label>Name:</label>
+                <input type="text">
+                <br>
+                <br>
+                <label>Department:</label>
+                <input type="text">
+                <!-- <input type="text"> -->
+                <br>
+                
+                <br>
+                <label>email-id:</label>
+                <input type="email">
+                <!-- <input type="text"> -->
+                <br>
+                <br>
+                <label>Contact-no:</label>
+                <input type="number"><label>
+                <!-- <input type="text"> -->
+                <br>
+                <!-- <br> -->
+              <label>  Any Query:</label>
+                <textarea rows="4" cols="60" style="margin-top: 5px;">Any query....</textarea>
+                <br>
+                <button type="submit" style="height: 20px;width: 60px;
+                ">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer style="height: 105px;width: 100%;  background-color: rgb(23, 23, 23);;
+    margin-top: 1%;">
+    <p style="display: flex;justify-content: flex-end;margin-right: 30px;">
+       <!-- <img style="height: 32px;padding-top: 10px;width: 120px;margin-right:-118px ;margin-top:2px;margin-bottom: 10px ;" src="data:image/png;base64,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"> -->
+        
+        <a  style="margin-top: 3%;font-size: 13px;"> Chandigarh-Patiala<br> National Highway (NH- 64 Village Jansla, Rajpura, Punjab 140401)<br>chitkara_university@gmail.com</a>
+        
+        <br>
+       
+    </p>
+
+    </footer>
+</body>
+</html>
