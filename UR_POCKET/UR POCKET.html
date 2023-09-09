@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/intel/Documents/Main%20page%20.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UR POCKET</title>
+    <!-- Icon Bar link-->
+    <link rel="icon" href="file:///C:/Users/intel/Pictures/UR.JPG" type="image/x-icon"> 
+    <link rel="stylesheet" href="all.min.css">
+
+    <link rel="stylesheet" href="bootstrap.min.css"  crossorigin="anonymous">
+
+    <link href="bootstrap.min(1).css" rel="stylesheet">
+    <link href="Chart.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="Chart.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="popper.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="css2.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="Main page .css">
+
+   
+    
+
+<style type="text/css">/* Chart.js */
+/*
+ * DOM element rendering detection
+ * https://davidwalsh.name/detect-node-insertion
+ */
+ *{
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+ }
+@keyframes chartjs-render-animation {
+	from { opacity: 0.99; }
+	to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 0.001s;
+}
+
+/*
+ * DOM element resizing detection
+ * https://github.com/marcj/css-element-queries
+ */
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0;
+}
+</style></head>
+<body>
+    <nav style="position: fixed;width: 1359px; background: linear-gradient(rgb(245, 91, 86),white);">
+        <div class="nav-links">
+          <ul>
+            <li><a class="fas fa-home" href="file:///C:/Users/intel/Documents/finalpage.html">&nbsp;HOME</a></li>
+            <li><a class="fab fa-instagram" href="https://instagram.com/ur_pocket?utm_medium=copy_link" target="_blank">
+                &nbsp;INSTAGRAM</a></li>
+            <li><a class="far fa-address-card" href="file:///C:/Users/intel/Documents/about%20team.html" target="_blank">&nbsp;ABOUT TEAM</a></li>
+            <li><a class="fas fa-at" href="file:///C:/Users/intel/Documents/Anushka%20contact.html">&nbsp;CONTACT</a></li>
+                </ul>
+        </div>
+      </nav>
+   <div class="top">
+       
+  </div>
+    <div class="text-box">
+      <h1>Manage Your Expenses Here!</h1>
+	  <br>
+      <p>We provides you ease way to carry on<br>
+           with your budget<br>
+		   <br>
+        <b>"WELCOME TO UR POCKET"</b>
+      </p>
+      <a href="file:///C:/Users/intel/Documents/Main%20page%20.html" class="hero-btn">To Know More</a>
+    </div>
+
+    <div class="row">
+        <div class="col-4 left-container">
+            <div class="month-container">
+                <div class="header fs-white"><center>Your Budget</center></div> 
+                <br> 
+                     <div class="text-boxes">
+                                <h3><b>Lets See Stats</b></h3>
+                          </div>
+                <div id="current-month" class="sub-text fs-white">May 2022</div>
+                <br>
+                
+                <div class="budget-container p-2 mt-4" style="width:290px;margin-top:-23px;">
+                    <input class="form-control input-amount-value" type="number" style="width: 284px;border:white;" placeholder="enter ur budget">
+                                    </div><br>
+                <div class="budget-container p-2 mt-4">
+                    <span id="month-budget" class="month-amount expense-Food">₹ 80</span>
+                </div><br>
+                <div class="budget-container p-2 mt-4">
+                    <span id="month-budget" class="month-amount">₹ 0</span>
+                </div>
+            </div>
+    
+            <div class="chart-container"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                <canvas id="expense-chart" style="display: block; width: 434px; height: 217px;" width="434" height="217" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+        <div class="col-7 right-container">
+            <div class="calc-container">
+                <div class="header fs-dark-grey"><center><h1><b>Track Your Monthly Budget</b></h1></center></div>
+                <br>
+                <div class="dropdown open">
+                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          CHOOSE YOUR TYPE
+                    </button>
+                    <br>
+                    <div class="dropdown-menu" style="cursor: pointer;">
+                        <a class="dropdown-item" id="type-Food">Food</a>
+                        <a class="dropdown-item" id="type-Travel">Travel</a>
+                        <a class="dropdown-item" id="type-Shopping">Shopping</a>
+                        <a class="dropdown-item" id="type-Entertainment">Entertainment</a>
+                        <a class="dropdown-item" id="type-Stationery">Stationery</a>
+                        <a class="dropdown-item" id="type-Rent">Rent</a>
+                        <a class="dropdown-item" id="type-Others">Others</a>
+                    </div>
+                </div>
+                <div class="mt-3 tracking-text text-capitalize sub-text bottom-border">Tracking Expenses 💰</div>
+    
+                <div class="row mt-4">
+                    <div class="col-7">
+                        <input class="form-control input-expense-description" type="text" placeholder="Description">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control input-expense-value" type="number" placeholder="Value">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" class="btn btn-success btn-submit-expense">✓</button>
+                    </div>
+                </div>
+                <div class="expense-list mt-4" style="height:234px">
+    
+                <div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">5/7/2022 </div><div class="col-8 expense-text fs-15"> 788 </div><div class="col-2 expense-value expense-Food fs-15"> ₹ 80 </div></div></div></div>
+    
+            </div>
+        </div>
+    </div>
+        <!--        Closing div for        PDF                           -->
+    
+    <script src="./UR POCKET_files/bootstrap.bundle.min.js.download" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    <script src="file:///C:/Users/intel/Documents/main.js"></script>
+        
+    
+    <div class="last" style="margin-top: 113px;">
+        <div class="cn" style="margin-left: 60px; ">
+            <h3>
+                UR POCKET
+            </h3><br>
+            <p class="we">
+                UR POCKET ! UR LIFE! UR FUTURE</p><br>
+            <p class="nj">
+                &nbsp; &nbsp; &nbsp; &nbsp;<b>"A budget</b> <br>
+                 is telling your money
+                 <br> <b>&nbsp; &nbsp; &nbsp;where to go<br></b>
+                  instead of wondering<br>
+                  <b>&nbsp; &nbsp;  where it went"</b>
+            </p>
+            <p class="nj" style="margin-top: 23px;">
+                <b>  UR POCKET </b> is a website based on<br>" budget management".
+                It replaces all<br> <b> your family budget planner</b>  i.e.
+                pen<br>  and paper it generally helps you to<br>  maintain your budget
+                not at the cost <br><b> of family smile.</b></p>
+            <div class="explore" style="margin-top: -429px;">
+                <h3 style="margin-top:23px ;">
+                    Explore
+                </h3><br>
+                <p class="nj" style="cursor: pointer;">
+                    <a href="file:///C:/Users/intel/Pictures/UR%20POCKET.html"> Home</a><br><br>
+                    <a href="file:///C:/Users/intel/Pictures/UR%20POCKET.html">Our Motto</a> <br><br>
+                    <a href="file:///C:/Users/intel/Pictures/UR%20POCKET.html"> About This Project</a><br><br>
+                     
+                    <a href="file:///C:/Users/intel/Pictures/About%20Team.html"> About The Team</a>
+                </p>
+                    
+            </div>
+            <div style="margin-top: -246px; margin-left: 753px;">
+                <h3 style="margin-left: -23px;">
+                    Get Started
+                </h3><br>
+                <p style=" cursor: pointer;" class="nj">
+                    <a href="file:///C:/Users/intel/Pictures/Login.html"> Log In</a><br><br> 
+                    <a href="file:///C:/Users/intel/Pictures/Registration.html">Register</a>
+                </p>
+            </div>
+                
+               
+    
+            
+            <div style="margin-top:-157px;margin-left: 1060px;">
+                 <h3 style="margin-left: -10px;">
+                    Get Help
+                </h3><br>
+                <p style=" cursor: pointer;" class="nj">
+                    <a href="file:///C:/Users/intel/Documents/Anushka%20contact.html"> Contact Us</a><br><br>
+                    
+                        <a class="fab fa-instagram" href="https://instagram.com/ur_pocket?utm_medium=copy_link" target="_blank">
+                          &nbsp;</a>
+                          <a class="fas fa-at" href="mailto:%20urpocket.star@gmail.com">&nbsp;</a>
+                          <a class="fab fa-facebook" href="file:///C:/Users/intel/Documents/Main%20page%20.html"></a> 
+                          <a class="fab fa-twitter" href="file:///C:/Users/intel/Documents/Main%20page%20.html"></a>
+                </p>
+            </div>
+               
+        
+  
+    </div>
+
+
+
+
+
+</div>
+    <!--        Closing div for        PDF                           -->
+
+<script src="./UR POCKET_files/bootstrap.bundle.min.js.download" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<script src="file:///C:/Users/intel/Documents/ap.js"></script>
+
+
+<script>
+    let ExpenseController = (() => {
+let total = 0, save=0,Food = 0, Travel = 0, Shopping = 0, Stationery=0, Entertainment=0, Rent=0, Others=0;
+
+return {
+    inputEntry(userInput) {
+        if (userInput['expenseType'] === 'Food') {
+            Food += userInput['value'];
+            total += userInput['value'];
+            save =userInput['amount']-total;
+        }
+        if (userInput['expenseType'] === 'Shopping') {
+            Shopping += userInput['value'];
+            total += userInput['value'];
+        }
+        if (userInput['expenseType'] === 'Travel') {
+            Travel += userInput['value'];
+            total += userInput['value'];
+        }
+        if (userInput['expenseType'] === 'Stationery') {
+            Stationery += userInput['value'];
+            total += userInput['value'];
+        }
+        if (userInput['expenseType'] === 'Entertainment') {
+            Entertainment += userInput['value'];
+            total += userInput['value'];
+        }
+        if (userInput['expenseType'] === 'Rent') {
+            Rent += userInput['value'];
+            total += userInput['value'];
+        }
+        if (userInput['expenseType'] === 'Others') {
+            Others += userInput['value'];
+            total += userInput['value'];
+        }
+    },
+
+    getFoodData() {
+        return Food;
+    },
+
+    getTravelData() {
+        return Travel;
+    },
+
+    getShoppingData() {
+        return Shopping;
+    },
+
+    getTotalData() {
+        return total;
+    },
+    getsaveData(){
+        return save;
+
+    },
+    getEntertainmentData() {
+        return Entertainment;
+    },
+    getStationeryData() {
+        return Stationery;
+    },
+    getRentData() {
+        return Rent;
+    },
+    getOthersData() {
+        return Others;
+    },
+}
+
+})();
+
+let UIController = (() => {
+let expenseType = 'Food';
+
+let HTMLStrings = {
+    inExpenseDescription: '.input-expense-description',
+    inExpenseValue: '.input-expense-value',
+    btnSubmitExpense: '.btn-submit-expense',
+    expenseList: '.expense-list',
+    currentMonth: '#current-month',
+    typeTravel: '#type-Travel',
+    typeFood: '#type-Food',
+    typeShopping: '#type-Shopping',
+    typeEntertainment: '#type-Entertainment',
+    typeOthers: '#type-Others',
+    typeStationery: '#type-Stationery',
+    typeRent: '#type-Rent',
+    trackingText: '.tracking-text',
+    expenseChart: '#expense-chart',
+    monthBudget: '#month-budget'
+};
+
+return {
+    numberFormat(number) {
+        return Intl.NumberFormat('en-IN').format(number);
+    },
+    showCurrentMonth() {
+        let now, month, year, months;
+
+        now = new Date();
+        month = now.getMonth();
+        year = now.getFullYear();
+        months = [
+            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+            'November', 'December'
+        ];
+        document.querySelector(HTMLStrings.currentMonth).textContent = months[month] + " " +  year;
+    },
+
+    getHTMLStrings() {
+        return HTMLStrings;
+    },
+
+    setExpenseType(type) {
+        console.log('here', type);
+        this.expenseType = type;
+        let emoji ="💰";
+        if (type === 'Food') {
+            emoji ="​🍟​🍔​🍕​";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-warning');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-danger');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-success')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-success');
+            }
+        }
+
+        if (type === 'Travel') {
+            emoji = "✈️🗽";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-warning');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-success')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-success');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-danger');
+            }
+        }
+
+        if (type === 'Shopping') {
+            emoji = "🛒";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-danger');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-success')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-success');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-warning');
+            }
+        }
+
+        if (type === 'Entertainment') {
+            emoji ="🎥🎡🎮";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-warning');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-danger');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-info')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-info');
+            }
+        }
+
+        if (type === 'Others') {
+            emoji ="💰";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-default')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-default');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-danger');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-warning');
+            }
+        }
+        if (type === 'Rent') {
+            emoji ="🏠";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-warning');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-primary')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-primary');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-link')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-link');
+            }
+        }
+
+        if (type === 'Stationery') {
+            emoji ="🖍✍📐📈";
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-warning')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-warning');
+            }
+            if (document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-danger')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.remove('btn-danger');
+            }
+            if (!document.querySelector(HTMLStrings.btnSubmitExpense).classList.contains('btn-success')) {
+                document.querySelector(HTMLStrings.btnSubmitExpense).classList.add('btn-success');
+            }
+        }
+
+        document.querySelector(HTMLStrings.trackingText).textContent = "Tracking " + type + " " + emoji;
+
+    },
+
+    getUserExpenseInput() {
+        return {
+            description: document.querySelector(HTMLStrings.inExpenseDescription).value,
+            value: parseInt(document.querySelector(HTMLStrings.inExpenseValue).value),
+            date: new Date().toLocaleDateString(),
+            expenseType: this.expenseType ? this.expenseType : 'Food'
+        }
+    },
+
+    addListItem (inputObj) {
+        let html, element;
+        element = HTMLStrings.expenseList;
+
+        if (inputObj['expenseType'] === 'Food') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Food fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        } else if (inputObj['expenseType'] === 'Travel') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Travel fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        } else if (inputObj['expenseType'] === 'Shopping') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Shopping fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        }else if (inputObj['expenseType'] === 'Entertainment') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Entertainment fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        }else if (inputObj['expenseType'] === 'Stationery') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Stationery fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        }else if (inputObj['expenseType'] === 'Rent') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Rent fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        }else if (inputObj['expenseType'] === 'Others') {
+            html = '<div class="bottom-border"> <div class="row expense-row"><div class="col-2 expense-date fs-15">' + inputObj['date'] + ' </div><div class="col-8 expense-text fs-15"> ' + inputObj['description'] + ' </div><div class="col-2 expense-value expense-Others fs-15"> ₹ ' + this.numberFormat(inputObj['value']) + ' </div></div>'
+        }
+
+
+        document.querySelector(element).insertAdjacentHTML('beforeend', html);
+
+        document.querySelector(HTMLStrings.inExpenseValue).value = "";
+        document.querySelector(HTMLStrings.inExpenseDescription).value = "";
+    },
+
+    updateOverallTotal(totalValue) {
+        document.querySelector(HTMLStrings.monthBudget).textContent  = "₹ " + this.numberFormat(totalValue);
+
+        if (totalValue > 0) {
+            if (document.querySelector(HTMLStrings.monthBudget).classList.contains('expense-Travel')) {
+                document.querySelector(HTMLStrings.monthBudget).classList.remove('expense-Travel');
+            }
+            document.querySelector(HTMLStrings.monthBudget).classList.add('expense-Food');
+        } else {
+            if (document.querySelector(HTMLStrings.monthBudget).classList.contains('expense-Food')) {
+                document.querySelector(HTMLStrings.monthBudget).classList.remove('expense-Food');
+            }
+            document.querySelector(HTMLStrings.monthBudget).classList.add('expense-Travel');
+        }
+    },
+
+    displayChart(Food = 0, Travel = 0, Shopping = 0, Entertainment=0,  Stationery=0,Rent=0, Others=0) {
+        let ctx = document.querySelector(HTMLStrings.expenseChart);
+        let expenseChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Food', 'Travel', 'Shopping', 'Entertainment', 'Stationery', 'Rent', 'Others'],
+                datasets: [{
+                    data: [Food, Travel, Shopping, Entertainment, Stationery, Rent, Others],
+                    backgroundColor: [
+                        '#039300',
+                        'rgba(255, 84, 98, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        '#2b5797',
+                        '#e8c3b9',
+                        '#1e7145',
+                        '#00aba9'
+                    ],
+                    borderWidth: 0.5
+                }]
+            },
+            options: {
+                legend: {
+                    labels: {
+                        fontColor:'black'
+                    }
+                }
+            }
+        });
+    }
+}
+})();
+
+((UIController, ExpenseController) => {
+
+let HTMLStrings = UIController.getHTMLStrings();
+let setupEventListeners = () => {
+    document.querySelector(HTMLStrings.btnSubmitExpense).addEventListener('click', addExpense);
+    document.querySelector(HTMLStrings.typeTravel).addEventListener('click', () => {
+        setExpenseType('Travel')
+    });
+    document.querySelector(HTMLStrings.typeShopping).addEventListener('click', () => {
+        setExpenseType('Shopping')
+    });
+    document.querySelector(HTMLStrings.typeFood).addEventListener('click', () => {
+        setExpenseType('Food')
+    });
+    document.querySelector(HTMLStrings.typeEntertainment).addEventListener('click', () => {
+        setExpenseType('Entertainment')
+    });
+    document.querySelector(HTMLStrings.typeRent).addEventListener('click', () => {
+        setExpenseType('Rent')
+    });
+    document.querySelector(HTMLStrings.typeStationery).addEventListener('click', () => {
+        setExpenseType('Stationery')
+    });
+    document.querySelector(HTMLStrings.typeOthers).addEventListener('click', () => {
+        setExpenseType('Others')
+    });
+};
+
+let setExpenseType = (type) => {
+    UIController.setExpenseType(type);
+}
+
+let addExpense = () => {
+    let input = UIController.getUserExpenseInput();
+    console.log(input);
+
+    if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+        console.log('Adding item');
+        UIController.addListItem(input);
+        ExpenseController.inputEntry(input);
+        UIController.updateOverallTotal(ExpenseController.getTotalData());
+        UIController.displayChart(ExpenseController.getFoodData(), ExpenseController.getTravelData(),
+            ExpenseController.getShoppingData(),ExpenseController.getEntertainmentData(),
+            ExpenseController.getStationeryData(),ExpenseController.getRentData(),ExpenseController.getOthersData());
+    }
+}
+let subExpense = () => {
+    let input = UIController.getUserAmountInput();
+    console.log(input);
+
+    if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+        console.log('Substracting item');
+        
+        ExpenseController.inputEntry(input);
+        UIController.updateOverallsave(ExpenseController.getSaveData());
+        UIController.displayChart(ExpenseController.getFoodData(), ExpenseController.getTravelData(),
+            ExpenseController.getShoppingData(),ExpenseController.getEntertainmentData(),
+            ExpenseController.getStationeryData(),ExpenseController.getRentData(),ExpenseController.getOthersData());
+    }
+}
+
+let init = () => {
+    console.log('Initializing...');
+    setupEventListeners();
+    UIController.showCurrentMonth();
+}
+
+init();
+
+})(UIController, ExpenseController);
+
+
+let amount=$('.form-control input-amount-value').val();
+let total=$('Total')
+var save=amount-total;
+
+
+</script>
+
+
+
+</body></html>
