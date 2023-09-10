@@ -110,6 +110,11 @@ Copy paste your resume code and work on it.
             /* color: grey; */
         }
         .projects{
+            padding-top: 3%;
+            padding-bottom: 3%;
+            /* margin-bottom: 9%; */
+            
+            background-color: rgb(246, 244, 244);
             height: auto;
         }
         .projects ul{
@@ -143,7 +148,8 @@ Copy paste your resume code and work on it.
           
         } */
         /* .portfolio{
-            background-color: white;
+            padding-top: 3%;
+            background-color: rgb(246, 244, 244);
         } */
         .skills{
             background-color: rgb(246, 244, 244);
@@ -384,19 +390,99 @@ Copy paste your resume code and work on it.
             box-shadow: 0px 0px 6px 4px rgba(186, 185, 185, 0.3);
         }
         
-        .education ul {
-            display: flex;
-        }
+        /* .education  {
+            /* display: flex; */
+            /* margin-top: 3%; */
+        /* } */ 
         .education ul li{
-            display: flex;
+            /* display: flex; */
             color: black;
-            background-color: white;border: none;
+            background: none;
+            border: none;
         }
-        .cott ul
+        .education .big{
+            text-align: end;
+            /* padding-left: 15%; */
+            /* align-items: center;
+            text-align: center; */
+            /* background-color: #7a94dc; */
+            margin: 3%;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+        }
+        .education .big  ul{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: start; */
+            /* align-items: flex-end; */
+            list-style-type: none;
+
+        }
+        
+        /* .cott ul{
+            display: flex;
+        } */
+       
         .cott ul li{
 
-            background-color: white;border: none;
+            background: none;
+            border: none;
+            /* display: flex;
+            align-items: flex-end; */
         }
+        .education{
+            /* height: 500px; */
+            width: 100%;
+            padding-top: 5%;
+            /* background-color: aqua; */
+        }
+        .cott{
+            width: 50%;
+            /* margin-left: 2%; */
+            /* background-color: #e3e8ef; */
+            border-right: 1px dotted blue;
+           
+            display: flex;
+            justify-content: end;
+            gap: 25%;
+            /* align-items: flex-end; */
+
+        }
+        .bott{
+            width: 50%;
+            margin-left: 50%;
+            /* background-color: #dce2ea; */
+           
+            display: flex;
+            justify-content: start;
+            border-left: 1px dotted blue;
+            gap: 15%;
+            
+            /* align-items: flex-end; */
+        }
+        .cott ul .high,.bott ul .high{
+            color: #2857a4;
+            font-size: 23px;
+            margin-bottom: 3%;
+        }
+        .cott ul .school,.bott ul .school{
+            color:rgb(248, 118, 3) ;
+            font-size: 15px;
+        }
+
+        .cott ul .year,.bott ul .year{
+            color:rgb(128, 127, 127) ;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .cott ul .agg,.bott ul .agg{
+            margin-top: 3%;
+            color:grey ;
+            font-size: 10px;
+            
+        }
+
 
        
         
@@ -460,6 +546,7 @@ Copy paste your resume code and work on it.
             <!-- <i class="fab fa-google"></i> Google icon -->
             
             <!-- <i class="fab fa-instagram"></i> Instagram icon --> 
+
             <!-- <i class="fab fa-telegram"></i> Telegram icon -->
              <!-- ert
              hjklaw
@@ -509,30 +596,80 @@ Copy paste your resume code and work on it.
 
 
 <section class="education" id="education">
-    <div class="content">
+    <div >
         <div class="heading">
             <span class="fas fa-graduation-cap"></span>
 
         <span>Education</span>
     </div>
-    <div>
+    <div class="big">
+        
         <ul>
            <li >
             <div class="cott">
-                <ul>
-                    <li >
-                        Secondary Education
+               
+                <span>
+                  <ul>
+                    <li class="high">
+                        Secondary Education (CBSE)
+                        
                     </li>
-                    <li>
-                        Lord Mahavira Academy
+                    <li class="school">
+                        Lord Mahavira Academy, Saharanpur
                     </li>
-                    <li>
+                    <li class="year">
                         2018-2019
                     </li>
-                    <li>
-                        Aggregate:86.5%
+                    <li class="agg">
+                        Aggregate: 86.5%
+                    </li>
+                 </ul>
+                </span>
+                <span class="fas fa-long-arrow-alt-left" style="color: #2857a4;font-size: 35px;"></span>
+            </div>
+           </li>
+           <li >
+            <div class="bott">
+                <span class="fas fa-long-arrow-alt-right" style="color: #2857a4;font-size: 35px;"></span>
+                <span>
+                <ul>
+                    <li class="high">
+                        	Higher Secondary Education (CBSE)
+                    </li>
+                    <li class="school">
+                        Lord Mahavira Academy, Saharanpur
+                    </li>
+                    <li class="year">
+                        2020-2021
+                    </li>
+                    <li class="agg">
+                        Aggregate:92%
                     </li>
                 </ul>
+                </span>
+                <!-- <span class="fas fa-hand-point-left" style="color: #2857a4;font-size: 25px;"></span> -->
+            </div>
+           </li>
+
+           <li >
+            <div class="cott">
+                <span>
+                  <ul>
+                    <li class="high">
+                        Bachelor of Engineering (CSE)
+                    </li>
+                    <li class="school">
+                       Chitkara University, Rajpura, Punjab
+                    </li>
+                    <li class="year">
+                        2021-2025
+                    </li>
+                    <li class="agg">
+                        Aggregate:90.6% till 5th Semester
+                    </li>
+                </ul>
+                </span>
+                <span class="fas fa-long-arrow-alt-left" style="color: #2857a4;font-size: 35px;"></span>
             </div>
            </li>
 
@@ -577,7 +714,7 @@ Copy paste your resume code and work on it.
 <section class="contact " >
     <div class="con " style="color: white;">
         <div class="heading">
-           <span class="fas fa-people-arrows" style="color: white;"></span>
+           <span class="fas fa-handshake" style="color: white;"></span>
             
         <span style="color: white;">Contact</span>
     </div>
@@ -588,8 +725,8 @@ Copy paste your resume code and work on it.
                 <input type="text" placeholder="Your Name"><br>
                 <input type="email" placeholder="Your Email"><br>
                 <input type="text" placeholder="Message"><br>
-                <button type="submit">SEND MESSAGE</button>
-                
+                <button type="submit" >SEND MESSAGE</button>
+                <!-- <button type="submit"></button> -->
                 
             </form>
         </div>
@@ -608,7 +745,7 @@ Copy paste your resume code and work on it.
                 </li>
                 <li style="display: flex; gap: 8px;">
                     <span class="fas fa-envelope"></span>
-                    <span>   8/1929, Jainbagh,New Krishna Nagar,Sre(247001)</span>
+                    <span>   8/1929, Jainbagh, New Krishna Nagar, Saharanpur (247001)</span>
                 </li>
             </ul>
            
