@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background:radial-gradient(rgb(240, 12, 12),rgb(226, 249, 122));
+            display: flex;
+            /* align-items: center; */
+            /* align-content: center; */
+            justify-content: center;
+            /* padding-bottom:-50% ; */
+            /* padding: 10%;
+            padding-left: ; */
+            /* text-align: center; */
+            
+
+            /* align-items: center; */
+        }
+        .content{
+            width: 40%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            /* background-color: blue; */
+            margin-top: 120px;
+            
+           /* text-align: center; */
+        }
+        p{
+            font-size: 45px;
+            color: white;
+            margin-left: 6%;
+        }
+        textarea{
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding: 9px;
+            border-radius: 10px;
+            border: none;
+            resize: none;
+            outline: none;
+            
+            
+
+        }
+        .fl button{
+            padding: 10px;
+            padding-left: 4%;
+            padding-right: 4%;
+            background-color: rgb(205, 38, 66);
+            color: white;
+            
+            border-radius: 35px;
+            cursor: pointer;
+        }
+        select{
+            
+            width: 80%;
+            padding: 0 20px;
+            /* height: 50px; */
+            /* height: 40%; */
+            border: none;
+            outline: none;
+            border-radius: 35px;
+            appearance: none;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ic_arrow_drop_down_36px.svg/1200px-Ic_arrow_drop_down_36px.svg.png);
+            background-repeat: no-repeat;
+            background-size: 33px;
+            background-position-x:440px ;
+            background-position-y:4px ;
+            
+        }
+        textarea::placeholder{
+            margin-top: 10px;
+            
+            /* color: white; */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="head">
+            Text To Speech Converter
+        </p>
+        <!-- <form action=""> -->
+            <textarea placeholder="write anything here......" name="" id="" cols="30" rows="20"></textarea>
+            <!-- <button type="d"></button> -->
+            <div style="display: flex;gap: 20px;border: none;" class="fl">
+             <select name="" id="select" class="select"> </select>
+            <button style="display: flex;gap: 10px;border: none;">
+                <span class="fas fa-play">
+
+                </span><span>Listen</span></button>
+        </div>
+
+        <!-- </form> -->
+    </div>
+    <script>
+       let speech=new SpeechSynthesisUtterance();
+       let voices=[];
+       let voiceSelect=document.querySelector("select");
+       window.speechSynthesis.onvoiceschanged=()=>{
+        voices=window.speechSynthesis.getVoices();
+        speech.voice=voices[0];
+        voices.forEach((voice,i)=>(voiceSelect.options[i]=new Option(voice.name,i)));
+       };
+       voiceSelect.addEventListener("change",()=>{
+        speech.voice=voices[voiceSelect.value];
+       })
+       document.querySelector("button").addEventListener("click",()=>{
+        speech.text=document.querySelector("textarea").value;
+        window.speechSynthesis.speak(speech);
+       })
+    </script>
+</body>
+</html>
