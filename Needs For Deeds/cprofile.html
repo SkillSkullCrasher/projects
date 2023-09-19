@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            /* overflow-x: hidden; */
+            /* overflow-y: auto; */
+        }
+        
+body {
+    height:fit-content;
+    width: 100%;
+    /* background-image: url("https://media.swncdn.com/cms/CCOM/70502-pexels-ylanite-koppens-love.1200w.tn.jpg"); */
+  background-size: cover;
+  /* filter: blur(3px); Apply blur effect */
+  opacity: 0.9;
+  z-index: -1;
+    
+  /* position: relativ; Add relative positioning */
+  /* overflow: hidden; Hide overflow from pseudo-element */
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://smartloving.org/wp-content/uploads/2021/08/Gratitude-The-Heart-beat-of-Love-1024x400.png");
+  background-size: cover;
+  background-position: center;
+  
+  filter: blur(3px);
+  opacity: 0.7;
+  z-index: -1;
+  height: 100vh; /* Update the height property to cover the entire viewport height */
+}
+
+       
+        .header{
+            /* width: 50%; */
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            /* background-color: rgb(171, 168, 168); */
+            /* justify-content: flex-start; */
+            /* padding-left: 10px; */
+            /* align-items: center; */
+            /* align-content: center; */
+            justify-content: end;
+            align-items: flex-start;
+            margin-right: 20px;
+            padding: 20px;
+            /* padding: ;
+             */
+             /* margin-left: 20px; */
+            /* padding-left: 690px;
+            /* box-shadow:  black; */
+            padding-top: 40px; 
+            /* height: 100vh; */
+            /* flex-direction: column; */
+            /* padding-left: -50px; */
+            gap:70px;
+
+        }
+        img{
+            height:190px;
+            width: 170px;
+            
+            border-radius    : 50%;
+            box-shadow: 0px 9px 8px 0px   rgb(21, 21, 69);;
+        }
+        .header ul{
+            list-style-type: none;
+        }
+        .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  margin-top: 50px;
+}
+
+         .yes{
+           display: flex;
+           flex-direction: column;
+           justify-content: flex-end;
+
+        }
+        .big{
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: 900;
+        }
+        .small{
+            font-size: 13px;
+            margin-top: 7px;
+            /* color: wh; */
+        }
+        .sec{
+            /* width: 50%; */
+        }
+    </style>
+</head>
+<body style="height: fit-content;background: url(https://smartloving.org/wp-content/uploads/2021/08/Gratitude-The-Heart-beat-of-Love-1024x400.png);background-repeat: no-repeat;max-width: 100%;
+background-size: cover;opacity: 0.9 ;background-position: center;">
+    
+  <header >
+    <nav style="">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars" style="color: blue;"></i>
+        </label>
+        <label for="" class="logo">Needs_For_Deeds</label>
+        <ul >
+        <!-- <img style="height: 90px;;width: 100px;margin-top: -28px;margin-right: 900px;" src="C:\Users\91730\Pictures\Screenshots\needs_for_deeds.png"  class="logo"> -->
+       
+           <!-- <li></li> -->
+            <li><a class="active" href="needs_for_deeds.html">HOME</a></li>
+            <li><a href="Parentsgallery.html">NEED-FOR</a></li>
+            <li><a href="#foo">CONTACT</a></li>
+            <li><a href="Aboutus.html">ABOUT US</a></li>
+            
+            
+        </ul>
+    </nav>
+    
+</header>
+    <div class="header">
+        <img src="https://www.smithlifehomecare.com/wp-content/uploads/2020/08/older-man-confused-by-phone.jpg" alt="">
+        <div class="sec">
+            <ul class="yes">
+                <li style="font-size: 50px;  color: rgb(2, 2, 67);" >Manmohan Das</li>
+                <li>Age 82, from Idaho Falls, Idaho.</li><br>
+                <li class="big">About me</li>
+                <li class="small">I am an elderly man living in an old-age home. <br>I enjoy spending time with others and engaging in
+                     meaningful conversations.</li>
+                     <li class="big" >Daily-Schedule</li>
+                  <ul style="list-style-type:disc;" class="small">
+                    
+                    <li>    Wake up at 7:30 a.m.</li>
+                  <li>  Enjoy breakfast on the porch while listening to favorite music
+                </li>  
+                <li>Take a stroll 
+                </li>   
+                <li> Tackle a puzzle or art project</li>
+                   <li> Pack a picnic lunch to take to the neighborhood park</li>
+                   <li> Run an errand</li>
+                  <li>  Spend some quiet time reading or take a short nap</li>
+                   <li> Make dinner together and tidy up afterwards</li>
+                   <li> Have a bath</li>
+                  <li>  Watch a film</li>
+                  <li>  Go to bed at 10:30 p.m.</li>
+                <li>    Take care of personal hygiene needs and get dressed</li>
+                    
+                  </ul>
+                <li class="big">Interests</li>
+                <ul class="small" style="list-style-type:disc;">
+                    <li>Reading</li>
+                    <li>Gardening</li>
+                    <li>Playing Chess</li>
+                </ul>
+               
+                <!-- <h3>Activity History</h3> -->
+                <!-- <li class="big" >Activity History</li>
+                <ul style="list-style-type:disc;" class="small">
+                    <li>Attended knitting club meeting on September 10th, 2023</li>
+                    <li>Participated in the gardening workshop on August 25th, 2023</li>
+                    <li>Joined the book club discussion on July 15th, 2023</li>
+                  </ul> -->
+                  <li class="big" >Contact Information</li>
+                  <ul style="list-style-type:disc;" class="small">
+                      <li>Email: john.doe@example.com</li>
+                      <li>Phone: 123-456-7890</li>
+                  </ul>
+                  
+                  
+                <!-- <p>Email: john.doe@example.com
+
+                </p>
+                <p>Phone: 123-456-7890</p> --> 
+                
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="center">
+        <ul>
+            <li>About me</li>
+            <li>I am an elderly man living in an old-age home. <br>I enjoy spending time with others and engaging in meaningful conversations.</li>
+            <li>Interests1</li>
+            <ul>
+                <li>Reading</li>
+                <li>Gardening</li>
+                <li>Playing Chess</li>
+            </ul>
+            <li>Contact Information</li>
+        </ul> -->
+        <!-- <p>
+            About me
+        </p>
+        <p>
+            I am an elderly man living in an old-age home. I enjoy spending time with others and engaging in meaningful conversations.
+        </p> -->
+        <!-- <p>
+            Interests
+        </p>
+        <ul>
+            <li>Reading</li>
+            <li>Gardening</li>
+            <li>Playing Chess</li>
+        </ul>
+        <br>
+        <p>Contact Information</p>
+        <p>Email: john.doe@example.com
+
+        </p>
+        <p>Phone: 123-456-7890</p> -->
+    <!-- </div> -->
+    
+    
+</body>
+</html>

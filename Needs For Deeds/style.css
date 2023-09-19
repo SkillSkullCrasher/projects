@@ -1,0 +1,294 @@
+.footer{
+    background-color: #24262b;
+    /* height: 500px; */
+    font-family: 'Poppins', sans-serif;
+ 
+  }
+  .search-input{
+    border: none;
+    outline: none;
+   }
+  .container{
+    max-width: 1170px;
+    /* background-color: red; */
+    margin: auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: rgb(2, 2, 67);
+    padding: 70px 0;
+    padding-bottom: 200px;
+  }
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    /* background-color: red ; */
+  }
+  .footer-col h4::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .last-col ul li:not(:last-child){
+    margin-bottom:2px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+   background-color: rgb(2, 2, 67);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  @media(max-width:767px){
+    .footer-col{
+      width: 50%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }  @media(max-width:574px){
+    .footer-col{
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }
+  nav li{
+      /* padding: 0; */
+     
+      list-style: none;
+      box-sizing: border-box;
+  }
+  nav{
+      background-color: rgb(2, 2, 67);
+      height: 80px;
+      width: 100%;
+      overflow-y: hidden;
+      
+  }
+  label.logo{
+      color: rgb(243, 242, 245);
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+  }
+  nav ul{
+      float: right;
+      margin-right: 20px;
+      text-decoration: none;
+  }
+  nav ul li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+  }
+  nav ul li a{
+      color: rgb(243, 240, 245);
+      font-size: 17px;
+      text-transform: uppercase;
+      padding: 7px 13px;
+      border-radius: 3px;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  ul li a.active,ul li a:hover{
+      background-color: rgb(53, 53, 78);
+      transition: .5s;
+      text-decoration: none;
+  }
+  .checkbtn{
+      /* color: ; */
+      font-size: 30px;
+      /* color: rgb(31, 23, 37); */
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+  }
+ #check{
+  display: none;
+ }
+ @media(max-width:952px){
+  label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+
+ }
+ @media (max-width:858px){
+  .checkbtn{
+      display: block;
+  }
+  nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -120%;
+      transition: all .5s;
+      cursor: pointer;
+
+      text-align: center;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      cursor: pointer;
+     /* line-height: 30px;  */
+  }
+  nav ul li a{
+      font-size: 20px;
+  }
+  ul li a:hover,ul li a.active{
+      background: none;
+      color: #b270f8;
+      cursor: pointer;
+  }
+  #check:checked ~ ul{
+      left:0;
+  }
+}
+main ,.main1
+      {  
+          /* margin-top: 40px; */
+          padding-top: 10px;
+          /* padding:10px ; */
+         
+          width: 100%;
+          
+      background-image:url("https://www.vaseemansari.com/wallpapers/love-wallpaper-with-a-beautiful-heart-image.html/love-letters-wallpaper-with-a-heart");  
+      /* size-adjust: ;
+      
+       */
+       max-width: 100%;
+       opacity: 0.5;
+       background-size: cover;
+       /* bac */
+       background-position: center;
+      }  
+      /* .main1{
+        padding-top: 10px;
+          /* padding:10px ; */
+         
+          /* width: 100%;
+        background-image: url("https://www.hindustantimes.com/ht-img/img/2023/03/31/1600x900/The-cohesiveness-of-a-joint-family-is-like-a-mathe_1680245294659.jpg");
+        max-width: 100%;
+       opacity: 0.5;
+       background-size: cover;
+       background-position: center;
+      
+      
+      }  */
+      label,form input,form button,h2{
+          margin-left: 40px;
+      }
+      form input, form button{
+          width: 80%;
+          height: 25px;
+          margin-top: -10px;
+          
+      }
+      form{
+          margin-left: 40px;
+          margin-top: 100px;
+          /* display: inline-block; */
+         display: flex;
+         flex-direction: column;
+         padding: 10px;
+        
+      }
+      .cont{
+        width: 100%;
+        min-height: 70vh;
+        background-color: #fcf6f6;
+        box-sizing: border-box;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        padding: 0 90px;
+      }
+      
+      .content-sec{
+        /* background-color: #e8e2ec; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .content-sec .card{
+        flex: 1;
+        margin: 20px 20px;
+        box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+      }
+      .content-sec .card img{
+        height: 250px;
+        width: 100%;
+      }
+      .content-sec .card h2{
+        margin: 15px 0px;
+        font-size: 28px;
+        color: #1662a1;
+        font-family: sans-serif;
+      }
+      .content-sec .card p{
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0px 10px;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+      }
+      @media screen and (max-width:768px){
+        .content-sec{
+          flex-direction: column;
+        }
+      }
+ 
